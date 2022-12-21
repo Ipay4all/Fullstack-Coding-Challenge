@@ -13,6 +13,12 @@ The result should be a dashboard with two pages (the application can be single-p
 
 ## Requirements
 
+**Git**
+* Maintain code on git (github/gitlab).
+* Push code with proper commits.
+* Create feature branch for each push (registration, dashboard).
+* Create a conflict and resolve.
+
 **Backend**
 * The backend of this project should be done in PHP using any framework. 
 * *product data* and *user credentials* data is persisted in a database. 
