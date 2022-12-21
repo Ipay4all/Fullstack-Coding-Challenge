@@ -3,49 +3,38 @@ As the next step in the interview process, we’d like you to complete a coding 
 
 ## The Project
 
-You will be building a basic version of a Ground Resources Management (GRM) Dashboard. There are two JSON files in this repository, *contacts.json* and *alerts.json*. Contacts (satellites) is a list of satellites in orbit and includes pertinent information about each device. Alerts is a list of unrelated status alerts with varying levels of severity. You will need to take this JSON data and persist it in a backend database. You will then develop a backend API, to be called upon by your frontend, which will display the data. This dashboard should allow registration and login of a user, requiring a password, and the user's credentials should also be persisted in your database.
+You will be building a basic version of a Virtual Product Management (VPM) Dashboard. There's a postman collection in this repository, Access token is required to get product details based on the country UAE. You will need to take product data and persist it in a backend database. You will then develop a backend API, to be called upon by your frontend, which will display the data. This dashboard should allow registration and login of a user, requiring a password, and the user's credentials should also be persisted in your database.
 
 The result should be a dashboard with two pages (the application can be single-page (SPA), or multiple pages):
 
 * A registration/login page
-* A main page that displays contact and alert information in a clean, user-friendly format
-
-Because this position requires familiarity with web components, we would like you to refer to our Astro UX Design site (https://astrouxds.com/) for this project. You may work with the web components directly, or build your own. We also encourage you to utilize our CSS-only library to better match Astro styling.
-
-Refer to the section *Astro Storybook and Sample Apps* at this link to get more details about Astro components, and to see several sample apps that may provide you with inspiration (https://astrouxds.com/getting-started/developers/).
+* A main page that displays products with details well formatted 
+* User should be able to add products, update details and delete products 
 
 ## Requirements
 
 **Backend**
-* The backend of this project can be done in Ruby or Python. You are permitted to use generators such as Ruby on Rails, Flask, etc.
-* *contacts.json*, *alerts.json*, and *user credentials* data is persisted in a database. 
+* The backend of this project should be done in PHP using any framework. 
+* *product data* and *user credentials* data is persisted in a database. 
   * Each data point should have a corresponding column in the database.
   * You may use any databse tool of your choice, such as PostgresQL, MongoDB, SQLite, etc.
-* API provides frontend with *contacts.json*, *alerts.json*, and *verified user credentials*.
+* API provides frontend with *product details*, and *verified user credentials*.
 
 **Frontend**
 * The frontend of this project can be done in React, Vue, or Angular. You are permitted to use any of these frameworks CLI generators to quickly start a project (npx create-react-app, ng new my-app, etc.)
-* The application utilizes either Astro UXDS components, or Astro UXDS styling
 * Login Page Reuirements
   * Authentication is required to access the application
   * User must register for a new account, or login with an existing account, to proceed to the dashboard
 * Main Page/Dashboard Requirements
-  * The dashboard page cleanly displays the data from *contacts.json*, *alerts.json* in two separate tables
-  * The following should be displayed in the Contacts pane:
-    * Display the total number of Contacts.
-    * Display the total different Contact states (*contactState*).
-    * For each Contact, display Name (*contactName*), Status (*contactStatus*), and Begin/End timestamp (*contactBeginTimestamp/contactEndTimestamp*).
-    * Allow sorting on the name.
-  * The following should be displayed in the Alerts pane:
-    * Display each Alert message (*errorMessage*).
-    * Display each Alert category (*errorCategory*).
-    * Display each Alert time (*errorTime*).
-    * Allow sorting on the category.
-
+  * The dashboard page cleanly displays the *product data*
+  * User should be able to add product
+  * User should be able to delete product
+  * User should be able to update product details
+  
 ## Additional Information
 * You are free to use any third-party libraries.
 * Have fun and be as creative as you like!
-* Please feel free to reach out to ask any questions (jeremy.benson@rocketcom.com).
+* Please feel free to reach out to ask any questions (rtahir@ipay4all.com).
 
 ## How to submit this challenge:
 1. Fork this repository
@@ -55,4 +44,4 @@ Refer to the section *Astro Storybook and Sample Apps* at this link to get more 
 
 ## Timeframe
 
-We would like the take home challenge to be completed within 5 days. If you need more time, please reach out to us. You will not be judged on how quickly you complete the challenge.
+We would like the take home challenge to be completed within 1.5 hours. If you need more time, please reach out to us. You will not be judged on how quickly you complete the challenge.
