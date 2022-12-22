@@ -46,7 +46,7 @@ The result should be a dashboard with two pages (the application can be single-p
 1. Fork this repository
 2. Work on your solution
 3. Deploy the frontend and backend of your application using free services (Netlify, Heroku, etc).
-4. Create a pull request with @github/rocket-bensonism as the reviewer.
+4. Create a pull request as the reviewer.
 
 ## Timeframe
 
