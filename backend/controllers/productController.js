@@ -2,6 +2,7 @@
 
 const ProductModel = require("../models/ProductSchema");
 const axios = require("axios");
+require ("dotenv").config();
 
 const getAllProducts = async (req, res, next) => {
   try {
@@ -60,8 +61,8 @@ const deleteProduct = async (req, res, next) => {
 const saveAllProducts = async (req, res, next) => {
   try {
     const response = await axios.post("https://auth.reloadly.com/oauth/token", {
-      client_id: "5IlYhQTzSZL3Ax8TtSmMpnEEdCishQEJ",
-      client_secret: "rrBf89OkVL-3CX6HtuHnMct9I6sgTe-xtX9XV2dOkDRdIj7ECRBik4RHBCDmh4H",
+      client_id: process.env.CLIENT_ID,
+      client_secret: process.env.CLIENT_SECRET,
       grant_type: "client_credentials",
       audience: "https://giftcards-sandbox.reloadly.com",
     });
