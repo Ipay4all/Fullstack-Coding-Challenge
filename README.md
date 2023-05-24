@@ -47,7 +47,7 @@ In this coding challenge, you will be tasked with the following:
 
 - You are allowed to leverage any third-party libraries or tools to complete the project.
 - Feel free to showcase your creativity and have fun while working on the challenge.
-- If you have any questions or require clarification, please reach out to us at rtahir@ipay4all.com.
+- If you have any questions or require clarification, please reach out to us at balshrah@ipay4all.com.
 
 ## How to Submit the Challenge (Optional):
 
