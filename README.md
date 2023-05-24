@@ -47,7 +47,7 @@ In this coding challenge, you will be tasked with the following:
 
 - You are allowed to leverage any third-party libraries or tools to complete the project.
 - Feel free to showcase your creativity and have fun while working on the challenge.
-- If you have any questions or require clarification, please reach out to us at balshrah@ipay4all.com.
+- If you have any questions or require clarification, please reach out to us at dev.ipay@ipay4all.com.
 
 ## How to Submit the Challenge (Optional):
 
@@ -56,6 +56,3 @@ In this coding challenge, you will be tasked with the following:
 3. Deploy both the frontend and backend of your application using free hosting services like Netlify, Heroku, etc.
 4. Create a pull request in this repository to submit your solution. You will be assigned as the reviewer.
 
-## Timeframe
-
-You are given a time frame of 3 hours to complete this coding challenge. Please note that the focus will be on the quality and accuracy of your solution rather than the speed of completion. If you require additional time, please inform us in advance.
