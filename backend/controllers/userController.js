@@ -32,7 +32,10 @@ const login = async (req, res, next) => {
             const valid = await bcrypt.compare(password, user.password);
             if(valid) {
                 const token = user.token;
-                res.status(200).json({ token });
+                res.status(200).json({ 
+                    token: token,
+                    userName: user.userName,
+                });
             } else {
                 next('Invalid Login');
             }
