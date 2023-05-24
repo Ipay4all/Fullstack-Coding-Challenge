@@ -2,18 +2,6 @@
 
 const mongoose = require("mongoose");
 
-const fixedRecipientDenominationsSchema = new mongoose.Schema({
-  type: [Number],
-});
-
-const fixedSenderDenominationsSchema = new mongoose.Schema({
-  type: [Number],
-});
-
-const fixedRecipientToSenderDenominationsMapSchema = new mongoose.Schema({
-  type: mongoose.Schema.Types.Mixed,
-});
-
 const brandSchema = new mongoose.Schema({
   brandId: Number,
   brandName: String,
@@ -44,9 +32,9 @@ const ProductSchema = new mongoose.Schema({
   senderCurrencyCode: String,
   minSenderDenomination: Number,
   maxSenderDenomination: Number,
-  fixedRecipientDenominations: fixedRecipientDenominationsSchema,
-  fixedSenderDenominations: fixedSenderDenominationsSchema,
-  fixedRecipientToSenderDenominationsMap: fixedRecipientToSenderDenominationsMapSchema,
+  fixedRecipientDenominations: [Number],
+  fixedSenderDenominations: [Number],
+  fixedRecipientToSenderDenominationsMap: mongoose.Schema.Types.Mixed,
   logoUrls: [String],
   brand: brandSchema,
   country: countrySchema,
