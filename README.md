@@ -1,53 +1,61 @@
-# Full-Stack-Developer-Coding-Challenge
-As the next step in the interview process, we’d like you to complete a coding challenge.
+# Full-Stack Developer Coding Challenge
+
+Welcome to the Full-Stack Developer coding challenge! This challenge aims to assess your skills and problem-solving abilities in building a basic Virtual Product Management (VPM) Dashboard.
 
 ## The Project
 
-You will be building a basic version of a Virtual Product Management (VPM) Dashboard. There's a postman collection in this repository, Access token is required to get product details based on the country UAE. You will need to take product data and persist it in a backend database. You will then develop a backend API, to be called upon by your frontend, which will display the data. This dashboard should allow registration and login of a user, requiring a password, and the user's credentials should also be persisted in your database.
+In this coding challenge, you will be tasked with the following:
 
-The result should be a dashboard with two pages (the application can be single-page (SPA), or multiple pages):
+1. Utilize the provided Postman collection to retrieve product details for the country UAE. Note that an access token is required for authentication.
 
-* A registration/login page
-* A main page that displays products with details well formatted 
-* User should be able to add products, update details and delete products 
+2. Persist the obtained product data in a backend database of your choice. Each data point should correspond to a column in the database.
+
+3. Develop a backend API that the frontend application can call. This API should provide product details and authenticate user credentials.
+
+4. Implement a user registration and login page. Users should be able to create new accounts or log in using existing credentials. User passwords and credentials should be securely stored in the database.
+
+5. Create a main page/dashboard to display the product data in a well-formatted manner. Users should be able to add, update, and delete product details.
 
 ## Requirements
 
-**Git**
-* Maintain code on git (github/gitlab).
-* Push code with proper commits.
-* Create feature branch for each push (registration, dashboard).
-* Create a conflict and resolve.
+### Git
 
-**Backend**
-* The backend of this project should be done in PHP using any framework. 
-* *product data* and *user credentials* data is persisted in a database. 
-  * Each data point should have a corresponding column in the database.
-  * You may use any databse tool of your choice, such as PostgresQL, MongoDB, SQLite, etc.
-* API provides frontend with *product details*, and *verified user credentials*.
+- Maintain your code using Git, preferably on a platform like GitHub or GitLab.
+- Commit your code with descriptive commit messages.
+- Create feature branches for each push, organizing them by functionality (e.g., registration, dashboard).
+- Introduce and resolve a deliberate conflict.
 
-**Frontend**
-* The frontend of this project can be done in React, Vue, or Angular. You are permitted to use any of these frameworks CLI generators to quickly start a project (npx create-react-app, ng new my-app, etc.)
-* Login Page Reuirements
-  * Authentication is required to access the application
-  * User must register for a new account, or login with an existing account, to proceed to the dashboard
-* Main Page/Dashboard Requirements
-  * The dashboard page cleanly displays the *product data*
-  * User should be able to add product
-  * User should be able to delete product
-  * User should be able to update product details
-  
+### Backend
+
+- You have the freedom to choose any language or framework for the project.
+- Persist the product data and user credentials in a database.
+  - Ensure that each data point has a corresponding column in the database.
+  - Feel free to use any database tool you prefer, such as PostgreSQL, MongoDB, SQLite, etc.
+- Develop a backend API that provides frontend applications with product details and verifies user credentials.
+
+### Frontend
+
+- Implement the frontend using React, Vue, or Angular. You can utilize the CLI generators of these frameworks (e.g., npx create-react-app, ng new my-app, etc.) to bootstrap your project.
+- Login Page Requirements:
+  - Authentication is required to access the application.
+  - Users must register for a new account or log in with existing credentials to access the dashboard.
+- Main Page/Dashboard Requirements:
+  - The dashboard should display the product data in a clean and organized manner.
+  - Users should be able to add, delete, and update product details.
+
 ## Additional Information
-* You are free to use any third-party libraries.
-* Have fun and be as creative as you like!
-* Please feel free to reach out to ask any questions (rtahir@ipay4all.com).
 
-## How to submit this challenge (Optional):
-1. Fork this repository
-2. Work on your solution
-3. Deploy the frontend and backend of your application using free services (Netlify, Heroku, etc).
-4. Create a pull request as the reviewer.
+- You are allowed to leverage any third-party libraries or tools to complete the project.
+- Feel free to showcase your creativity and have fun while working on the challenge.
+- If you have any questions or require clarification, please reach out to us at rtahir@ipay4all.com.
+
+## How to Submit the Challenge (Optional):
+
+1. Fork this repository to your own GitHub/GitLab account.
+2. Develop your solution within the forked repository.
+3. Deploy both the frontend and backend of your application using free hosting services like Netlify, Heroku, etc.
+4. Create a pull request in this repository to submit your solution. You will be assigned as the reviewer.
 
 ## Timeframe
 
-We would like the take home challenge to be completed within 1.5 hours. If you need more time, please reach out to us. You will not be judged on how quickly you complete the challenge.
+You are given a time frame of 3 hours to complete this coding challenge. Please note that the focus will be on the quality and accuracy of your solution rather than the speed of completion. If you require additional time, please inform us in advance.
