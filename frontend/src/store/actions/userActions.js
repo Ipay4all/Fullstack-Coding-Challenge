@@ -48,7 +48,7 @@ export const signUp = (dispatch, payload, navigate) => {
         navigate("/login");
       })
       .catch((error) => {
-        dispatch(userFailure(error.response.data.message));
+        dispatch(userFailure(error.response.data));
       });
   } catch (error) {
     dispatch(userFailure(error.message));

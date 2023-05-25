@@ -3,8 +3,8 @@ import { createSlice } from '@reduxjs/toolkit';
 export const userSlice = createSlice({
     name: 'user',
     initialState: {
-        userName: '',
-        token: null,
+        userName: localStorage.getItem('userName') || '',
+        token: localStorage.getItem('token') || null,
         error: null,
         loading: false,
     },
