@@ -84,7 +84,9 @@ const saveAllProducts = async (req, res, next) => {
       await ProductModel.create(product);
     }
 
-    res.status(201).send("Product details retrieved and saved to the database successfully!");
+    const products = await ProductModel.find({});
+
+    res.status(201).send(products);
   } catch (error) {
     console.error("Error retrieving or saving product details:", error);
     next(error);
