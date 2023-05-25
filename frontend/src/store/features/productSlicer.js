@@ -45,7 +45,7 @@ export const productSlice = createSlice({
         getOriginalProductSuccess: (state, action) => {
             state.loading = false;
             state.error = null;
-            state.product = action.payload;
+            state.products = action.payload;
         },
         dropDBSuccess: (state, action) => {
             state.loading = false;

@@ -8,6 +8,7 @@ export const getAllProducts = (dispatch) => {
         axios
             .get(`${process.env.REACT_APP_SERVER_URL}/products`)
             .then(response => {
+                console.log(response.data)
                 dispatch(getAllProductsSuccess(response.data));
             })
             .catch(error => {
@@ -36,25 +37,25 @@ export const getProduct = (dispatch, id) => {
 }
 
 // Add a product
-export const addProduct = (dispatch, payload) => {
-    const productDetails = {
-        name: payload.target.name.value,
-        price: payload.target.price.value,
-        description: payload.target.description.value,
-        image: payload.target.image.value,
-        category: payload.target.category.value,
-    };
+export const addProduct = (dispatch, payload, toast) => {
 
     try {
         dispatch(productRequest());
         axios
-            .post(`${process.env.REACT_APP_SERVER_URL}/product`, productDetails, {
+            .post(`${process.env.REACT_APP_SERVER_URL}/product`, payload, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`
                 }
             })  
             .then(response => {
                 dispatch(addProductSuccess(response.data));
+                toast({
+                    title: "Product added.",
+                    description: "We've added your product for you.",
+                    status: "success",
+                    duration: 3500,
+                    isClosable: true,
+                });
             })
             .catch(error => {
                 dispatch(productFailure(error.response.data.message));
@@ -65,25 +66,28 @@ export const addProduct = (dispatch, payload) => {
 }
 
 // Update a product
-export const updateProduct = (dispatch, payload) => {
-    const productDetails = {
-        name: payload.target.name.value,
-        price: payload.target.price.value,
-        description: payload.target.description.value,
-        image: payload.target.image.value,
-        category: payload.target.category.value,
-    };
+export const updateProduct = (dispatch, payload, toast) => {
+
+    console.log(payload)
 
     try {
         dispatch(productRequest());
         axios
-            .put(`${process.env.REACT_APP_SERVER_URL}/product/${payload.target.id.value}`, productDetails, {
+            .put(`${process.env.REACT_APP_SERVER_URL}/product/${payload.id}`, payload, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`
                 }
             })
             .then(response => {
                 dispatch(updateProductSuccess(response.data));
+                toast({
+                    title: "Product updated.",
+                    description: payload.productName + " has been updated.",
+                    status: "success",
+                    duration: 3500,
+                    isClosable: true,
+                });
+
             })
             .catch(error => {
                 dispatch(productFailure(error.response.data.message));
@@ -104,7 +108,7 @@ export const deleteProduct = (dispatch, id) => {
                 }
             })
             .then(response => {
-                dispatch(deleteProductSuccess(response.data));
+                dispatch(deleteProductSuccess(id));
             })
             .catch(error => {
                 dispatch(productFailure(error.response.data.message));
@@ -119,7 +123,7 @@ export const getOriginalProducts = (dispatch) => {
     try {
         dispatch(productRequest());
         axios
-            .post(`${process.env.REACT_APP_SERVER_URL}/save`, {
+            .get(`${process.env.REACT_APP_SERVER_URL}/save`, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`
                 }
@@ -138,7 +142,7 @@ export const getOriginalProducts = (dispatch) => {
 }
 
 // Drop DB
-export const dropDB = (dispatch, password) => {
+export const dropDB = (dispatch, password, toast, onClose) => {
     try {
         dispatch(productRequest());
         axios
@@ -148,11 +152,19 @@ export const dropDB = (dispatch, password) => {
                 }
             })
             .then(response => {
-                dispatch(dropDBSuccess(response.data));
+                dispatch(dropDBSuccess());
+                toast({
+                    title: "Products Database Deleted",
+                    description: "You have cleared all data in the Products Database",
+                    status: "success",
+                    duration: 5000,
+                    isClosable: true,
+                  });
+                onClose();
             }
             )
             .catch(error => {
-                dispatch(productFailure(error.response.data.message));
+                dispatch(productFailure(error.response));
             }
             );
     } catch (error) {

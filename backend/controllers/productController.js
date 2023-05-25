@@ -41,7 +41,7 @@ const updateProduct = async (req, res, next) => {
     const product = await ProductModel.findById(req.params.id);
     await ProductModel.updateOne(product, req.body);
     const output = await ProductModel.findById(req.params.id);
-    console.log(output);
+    // console.log(output);
     res.status(202).json(output);
   } catch (err) {
     next(err);
@@ -50,9 +50,9 @@ const updateProduct = async (req, res, next) => {
 
 const deleteProduct = async (req, res, next) => {
   try {
-    const item = await ProductModel.findById(req.params.id);
-    const deletedItem = await ProductModel.deleteOne(item);
-    res.status(204).json("Item deleted");
+    const product = await ProductModel.findById(req.params.id);
+    const deletedProduct = await ProductModel.deleteOne(product);
+    res.status(204).json("Product deleted");
   } catch (err) {
     next(err);
   }
@@ -84,7 +84,9 @@ const saveAllProducts = async (req, res, next) => {
       await ProductModel.create(product);
     }
 
+
     const products = await ProductModel.find({});
+
 
     res.status(201).send(products);
   } catch (error) {

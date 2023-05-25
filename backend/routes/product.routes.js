@@ -11,7 +11,7 @@ router.post("/product",bearerAuth, createProduct);
 router.put("/product/:id",bearerAuth, updateProduct);
 router.delete("/product/:id",bearerAuth, deleteProduct);
 
-router.post("/save",bearerAuth, saveAllProducts);
+router.get("/save",bearerAuth, saveAllProducts);
 router.delete("/drop/:password",bearerAuth, dropAllProducts);
 
 module.exports = router;
